@@ -29,17 +29,14 @@
       </div>
       <div class="card form" id="guide">
         <h2>Get the free guide</h2>
-        <p>Leave your details and we’ll send the guide once the Budget details have been checked against official sources.</p>
-        <form action="https://formsubmit.co/domain@lis.com.au" method="POST">
-          <input type="hidden" name="_subject" value="CGT Changes Guide lead">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="http://cgtchanges.com.au/thanks.html">
+        <p>Leave your details and we’ll send the white paper within 24 hours, after the Budget details have been checked against official sources.</p>
+        <form action="https://cgtchanges-lead-api.vercel.app/api/lead" method="POST">
+          <input type="hidden" name="_redirect" value="http://cgtchanges.com.au/thanks.html">
           <input type="hidden" name="consent_version" value="cgt-required-ack-v2026-05-12-p0">
           <input type="hidden" name="privacy_version" value="privacy-notice-v2026-05-12-p0">
           <input type="hidden" name="source_page" id="source_page" value="http://cgtchanges.com.au/">
           <input type="hidden" name="source_domain" value="cgtchanges.com.au">
-          <input type="hidden" name="partner_sharing_consent" value="no">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
           <input type="hidden" name="utm_source" id="utm_source" value="">
           <input type="hidden" name="utm_medium" id="utm_medium" value="">
           <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
@@ -56,9 +53,8 @@
             <div class="field"><label for="state">State</label><select id="state" name="state"><option value="">Select</option><option>NSW</option><option>VIC</option><option>QLD</option><option>WA</option><option>SA</option><option>TAS</option><option>ACT</option><option>NT</option></select></div>
           </div>
           <div class="field"><label for="situation">Which best describes you?</label><select id="situation" name="situation"><option value="">Select</option><option>Investment property owner</option><option>Thinking about selling property</option><option>First home buyer / buyer</option><option>Real estate professional</option><option>Other</option></select></div>
-          <label class="check"><input type="checkbox" name="required_disclaimer_privacy_ack" value="yes" required> <span>I acknowledge this site and guide provide general information only, are not tax/legal/financial/investment/property advice, and that my submitted details will be handled under the <a href="/privacy.html">privacy notice</a> to send the guide.</span></label>
-          <label class="check"><input type="checkbox" name="marketing_updates_consent" value="yes"> <span>I would also like to receive occasional research and marketing follow-up about CGT, property and tax reform updates. I can opt out at any time.</span></label>
-          <button type="submit">Send me the guide</button>
+          <label class="check"><input type="checkbox" name="research_marketing_consent" value="yes" required> <span>I acknowledge this site and guide provide general information only, are not tax/legal/financial/investment/property advice, and agree my information may be used to send the white paper and for research and marketing purposes, including follow-up about CGT, property and tax reform updates. I can opt out at any time. See the <a href="/privacy.html">privacy notice</a>.</span></label>
+          <button type="submit">Send me the white paper</button>
           <p class="small">No real-estate-agent referral or partner contact consent is requested on this form. If that changes, we will ask separately. Speak with a registered tax agent, financial adviser or lawyer about your circumstances.</p>
         </form>
       </div>
